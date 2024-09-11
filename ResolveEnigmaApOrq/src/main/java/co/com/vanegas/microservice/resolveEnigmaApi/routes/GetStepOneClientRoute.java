@@ -20,19 +20,26 @@ public class GetStepOneClientRoute extends RouteBuilder {
                 .unmarshal().json(JsonLibrary.Jackson, ClientJsonApiBodyResponseSuccess.class)
                 .log("java Response micorservice step one ${body}")
                 .process(new Processor() {
-                    @Override
-                    public void process(Exchange exchange) throws Exception {
-                        ClientJsonApiBodyResponseSuccess stepOneResponse = (ClientJsonApiBodyResponseSuccess) exchange.getIn().getBody();
-                        if (stepOneResponse.getData().get(0).getStep().equalsIgnoreCase("1")) {
-                            exchange.setProperty("Step1", stepOneResponse.getData().get(0).getStepDescription());
-                            exchange.setProperty("Error", "0000");
-                            exchange.setProperty("ErrorDescription", "No error");
-                        } else {
-                            exchange.setProperty("Error", "0001");
-                            exchange.setProperty("ErrorDescription", "Error consulting the step one");
-                        }
+            @Override
+            public void process(Exchange exchange) throws Exception {
+                ClientJsonApiBodyResponseSuccess stepOneResponse = (ClientJsonApiBodyResponseSuccess) exchange.getIn().getBody();
+
+                // Add null checks to avoid NullPointerException
+                if (stepOneResponse != null && stepOneResponse.getData() != null && !stepOneResponse.getData().isEmpty()) {
+                    if ("1".equalsIgnoreCase(stepOneResponse.getData().get(0).getStep())) {
+                        exchange.setProperty("Step1", stepOneResponse.getData().get(0).getStepDescription());
+                        exchange.setProperty("Error", "0000");
+                        exchange.setProperty("ErrorDescription", "No error");
+                    } else {
+                        exchange.setProperty("Error", "0001");
+                        exchange.setProperty("ErrorDescription", "Error consulting step one");
                     }
-                })
+                } else {
+                    exchange.setProperty("Error", "0002");
+                    exchange.setProperty("ErrorDescription", "Invalid response or no data available");
+                }
+            }
+        })
                 .log("Response code ${exchageProperty[Error]}");
     }
 }

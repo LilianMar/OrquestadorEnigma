@@ -11,8 +11,9 @@ import javax.validation.constraints.*;
  * Header
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2024-02-27T19:20:23.716-05:00[America/Bogota]")
-public class Header {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-22T10:36:16.361-05:00")
+
+public class Header   {
   @JsonProperty("id")
   private String id = null;
 
@@ -27,9 +28,10 @@ public class Header {
   /**
    * Get id
    * @return id
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   @NotNull
+
 
   public String getId() {
     return id;
@@ -47,9 +49,10 @@ public class Header {
   /**
    * Get type
    * @return type
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   @NotNull
+
 
   public String getType() {
     return type;
@@ -70,7 +73,7 @@ public class Header {
     }
     Header header = (Header) o;
     return Objects.equals(this.id, header.id) &&
-        Objects.equals(this.type, header.type);
+            Objects.equals(this.type, header.type);
   }
 
   @Override
@@ -82,7 +85,7 @@ public class Header {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Header {\n");
-    
+
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");

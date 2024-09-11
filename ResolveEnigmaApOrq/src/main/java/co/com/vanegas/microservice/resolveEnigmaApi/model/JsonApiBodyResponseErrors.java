@@ -16,7 +16,8 @@ import javax.validation.constraints.*;
  * JsonApiBodyResponseErrors
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2024-02-27T19:20:23.716-05:00[America/Bogota]")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-22T10:36:16.361-05:00")
+
 public class JsonApiBodyResponseErrors   {
   @JsonProperty("errors")
   @Valid
@@ -35,10 +36,12 @@ public class JsonApiBodyResponseErrors   {
   /**
    * Get errors
    * @return errors
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   @NotNull
+
   @Valid
+
   public List<ErrorDetail> getErrors() {
     return errors;
   }
@@ -69,7 +72,7 @@ public class JsonApiBodyResponseErrors   {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class JsonApiBodyResponseErrors {\n");
-    
+
     sb.append("    errors: ").append(toIndentedString(errors)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -12,8 +12,9 @@ import javax.validation.constraints.*;
  * GetEnigmaStepResponse
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2024-02-27T19:20:23.716-05:00[America/Bogota]")
-public class GetEnigmaStepResponse {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-22T10:36:16.361-05:00")
+
+public class GetEnigmaStepResponse   {
   @JsonProperty("header")
   private Header header = null;
 
@@ -28,11 +29,12 @@ public class GetEnigmaStepResponse {
   /**
    * Get header
    * @return header
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   @NotNull
 
   @Valid
+
   public Header getHeader() {
     return header;
   }
@@ -49,9 +51,10 @@ public class GetEnigmaStepResponse {
   /**
    * Get answer
    * @return answer
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   @NotNull
+
 
   public String getAnswer() {
     return answer;
@@ -72,7 +75,7 @@ public class GetEnigmaStepResponse {
     }
     GetEnigmaStepResponse getEnigmaStepResponse = (GetEnigmaStepResponse) o;
     return Objects.equals(this.header, getEnigmaStepResponse.header) &&
-        Objects.equals(this.answer, getEnigmaStepResponse.answer);
+            Objects.equals(this.answer, getEnigmaStepResponse.answer);
   }
 
   @Override
@@ -84,7 +87,7 @@ public class GetEnigmaStepResponse {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GetEnigmaStepResponse {\n");
-    
+
     sb.append("    header: ").append(toIndentedString(header)).append("\n");
     sb.append("    answer: ").append(toIndentedString(answer)).append("\n");
     sb.append("}");

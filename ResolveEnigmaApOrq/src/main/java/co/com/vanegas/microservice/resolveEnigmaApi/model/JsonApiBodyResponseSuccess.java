@@ -14,8 +14,9 @@ import javax.validation.constraints.*;
  * JsonApiBodyResponseSuccess
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2024-02-27T19:20:23.716-05:00[America/Bogota]")
-public class JsonApiBodyResponseSuccess {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-22T10:36:16.361-05:00")
+
+public class JsonApiBodyResponseSuccess   {
   @JsonProperty("data")
   @Valid
   private List<GetEnigmaStepResponse> data = new ArrayList<GetEnigmaStepResponse>();
@@ -33,10 +34,12 @@ public class JsonApiBodyResponseSuccess {
   /**
    * Get data
    * @return data
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   @NotNull
+
   @Valid
+
   public List<GetEnigmaStepResponse> getData() {
     return data;
   }
@@ -67,7 +70,7 @@ public class JsonApiBodyResponseSuccess {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class JsonApiBodyResponseSuccess {\n");
-    
+
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("}");
     return sb.toString();
