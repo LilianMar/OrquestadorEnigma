@@ -12,13 +12,17 @@ import java.util.Objects;
  * GetEnigmaStepResponse
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2024-02-27T19:20:23.716-05:00[America/Bogota]")
-public class ClientGetEnigmaStepResponse {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-15T16:02:12.290-05:00")
+
+public class ClientGetEnigmaStepResponse   {
   @JsonProperty("header")
   private ClientHeader header = null;
 
-  @JsonProperty("answer")
-  private String answer = null;
+  @JsonProperty("step")
+  private String step = null;
+
+  @JsonProperty("stepDescription")
+  private String stepDescription = null;
 
   public ClientGetEnigmaStepResponse header(ClientHeader header) {
     this.header = header;
@@ -28,11 +32,12 @@ public class ClientGetEnigmaStepResponse {
   /**
    * Get header
    * @return header
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   @NotNull
 
   @Valid
+
   public ClientHeader getHeader() {
     return header;
   }
@@ -41,29 +46,50 @@ public class ClientGetEnigmaStepResponse {
     this.header = header;
   }
 
-  public ClientGetEnigmaStepResponse answer(String answer) {
-    this.answer = answer;
+  public ClientGetEnigmaStepResponse step(String step) {
+    this.step = step;
     return this;
   }
 
   /**
-   * Get answer
-   * @return answer
-  **/
+   * Get step
+   * @return step
+   **/
   @ApiModelProperty(required = true, value = "")
   @NotNull
 
-  public String getAnswer() {
-    return answer;
+
+  public String getStep() {
+    return step;
   }
 
-  public void setAnswer(String answer) {
-    this.answer = answer;
+  public void setStep(String step) {
+    this.step = step;
+  }
+
+  public ClientGetEnigmaStepResponse stepDescription(String stepDescription) {
+    this.stepDescription = stepDescription;
+    return this;
+  }
+
+  /**
+   * Get stepDescription
+   * @return stepDescription
+   **/
+  @ApiModelProperty(value = "")
+
+
+  public String getStepDescription() {
+    return stepDescription;
+  }
+
+  public void setStepDescription(String stepDescription) {
+    this.stepDescription = stepDescription;
   }
 
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -72,21 +98,23 @@ public class ClientGetEnigmaStepResponse {
     }
     ClientGetEnigmaStepResponse getEnigmaStepResponse = (ClientGetEnigmaStepResponse) o;
     return Objects.equals(this.header, getEnigmaStepResponse.header) &&
-        Objects.equals(this.answer, getEnigmaStepResponse.answer);
+            Objects.equals(this.step, getEnigmaStepResponse.step) &&
+            Objects.equals(this.stepDescription, getEnigmaStepResponse.stepDescription);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(header, answer);
+    return Objects.hash(header, step, stepDescription);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GetEnigmaStepResponse {\n");
-    
+
     sb.append("    header: ").append(toIndentedString(header)).append("\n");
-    sb.append("    answer: ").append(toIndentedString(answer)).append("\n");
+    sb.append("    step: ").append(toIndentedString(step)).append("\n");
+    sb.append("    stepDescription: ").append(toIndentedString(stepDescription)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -95,7 +123,7 @@ public class ClientGetEnigmaStepResponse {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

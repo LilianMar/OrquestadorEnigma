@@ -15,18 +15,19 @@ import java.util.Objects;
  * JsonApiBodyResponseSuccess
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2024-02-27T19:20:23.716-05:00[America/Bogota]")
-public class ClientJsonApiBodyResponseSuccess {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-15T16:02:12.290-05:00")
+
+public class ClientJsonApiBodyResponseSuccess   {
   @JsonProperty("data")
   @Valid
-  private List<GetEnigmaStepResponse> data = new ArrayList<GetEnigmaStepResponse>();
+  private List<ClientGetEnigmaStepResponse> data = new ArrayList<ClientGetEnigmaStepResponse>();
 
-  public ClientJsonApiBodyResponseSuccess data(List<GetEnigmaStepResponse> data) {
+  public ClientJsonApiBodyResponseSuccess data(List<ClientGetEnigmaStepResponse> data) {
     this.data = data;
     return this;
   }
 
-  public ClientJsonApiBodyResponseSuccess addDataItem(GetEnigmaStepResponse dataItem) {
+  public ClientJsonApiBodyResponseSuccess addDataItem(ClientGetEnigmaStepResponse dataItem) {
     this.data.add(dataItem);
     return this;
   }
@@ -34,21 +35,23 @@ public class ClientJsonApiBodyResponseSuccess {
   /**
    * Get data
    * @return data
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   @NotNull
+
   @Valid
-  public List<GetEnigmaStepResponse> getData() {
+
+  public List<ClientGetEnigmaStepResponse> getData() {
     return data;
   }
 
-  public void setData(List<GetEnigmaStepResponse> data) {
+  public void setData(List<ClientGetEnigmaStepResponse> data) {
     this.data = data;
   }
 
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -68,7 +71,7 @@ public class ClientJsonApiBodyResponseSuccess {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class JsonApiBodyResponseSuccess {\n");
-    
+
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -78,7 +81,7 @@ public class ClientJsonApiBodyResponseSuccess {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

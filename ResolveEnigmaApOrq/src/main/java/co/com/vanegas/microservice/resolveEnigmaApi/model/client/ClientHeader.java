@@ -11,8 +11,9 @@ import java.util.Objects;
  * Header
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2024-02-27T19:20:23.716-05:00[America/Bogota]")
-public class ClientHeader {
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2018-06-15T16:02:12.290-05:00")
+
+public class ClientHeader   {
   @JsonProperty("id")
   private String id = null;
 
@@ -27,9 +28,10 @@ public class ClientHeader {
   /**
    * Get id
    * @return id
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   @NotNull
+
 
   public String getId() {
     return id;
@@ -47,9 +49,10 @@ public class ClientHeader {
   /**
    * Get type
    * @return type
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   @NotNull
+
 
   public String getType() {
     return type;
@@ -61,7 +64,7 @@ public class ClientHeader {
 
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -70,7 +73,7 @@ public class ClientHeader {
     }
     ClientHeader header = (ClientHeader) o;
     return Objects.equals(this.id, header.id) &&
-        Objects.equals(this.type, header.type);
+            Objects.equals(this.type, header.type);
   }
 
   @Override
@@ -82,7 +85,7 @@ public class ClientHeader {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Header {\n");
-    
+
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
@@ -93,7 +96,7 @@ public class ClientHeader {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

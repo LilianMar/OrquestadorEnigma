@@ -19,12 +19,12 @@ public class GetStepOneClientRoute extends RouteBuilder {
                 .log("String Response micorservice step one ${body}")
                 .unmarshal().json(JsonLibrary.Jackson, ClientJsonApiBodyResponseSuccess.class)
                 .log("java Response micorservice step one ${body}")
-                /*.process(new Processor() {
+                .process(new Processor() {
                     @Override
                     public void process(Exchange exchange) throws Exception {
                         ClientJsonApiBodyResponseSuccess stepOneResponse = (ClientJsonApiBodyResponseSuccess) exchange.getIn().getBody();
-                        if (stepOneResponse.getData().get(0).getStep.equalsIgnoreCase("1")) {
-                            exchange.setProperty("Step1", stepOneResponse.getData().get(0).getDescription());
+                        if (stepOneResponse.getData().get(0).getStep().equalsIgnoreCase("1")) {
+                            exchange.setProperty("Step1", stepOneResponse.getData().get(0).getStepDescription());
                             exchange.setProperty("Error", "0000");
                             exchange.setProperty("ErrorDescription", "No error");
                         } else {
@@ -32,7 +32,7 @@ public class GetStepOneClientRoute extends RouteBuilder {
                             exchange.setProperty("ErrorDescription", "Error consulting the step one");
                         }
                     }
-                })*/
+                })
                 .log("Response code ${exchageProperty[Error]}");
     }
 }

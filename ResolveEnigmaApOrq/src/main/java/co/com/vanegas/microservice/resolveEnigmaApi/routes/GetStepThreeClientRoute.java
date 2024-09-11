@@ -2,6 +2,7 @@ package co.com.vanegas.microservice.resolveEnigmaApi.routes;
 
 import co.com.vanegas.microservice.resolveEnigmaApi.model.client.ClientJsonApiBodyResponseSuccess;
 import org.apache.camel.Exchange;
+import org.apache.camel.Processor;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.dataformat.JsonLibrary;
 
@@ -18,12 +19,12 @@ public class GetStepThreeClientRoute extends RouteBuilder {
                 .log("String Response micorservice step three ${body}")
                 .unmarshal().json(JsonLibrary.Jackson, ClientJsonApiBodyResponseSuccess.class)
                 .log("java Response micorservice step three ${body}")
-                /*.process(new Processor() {
+                .process(new Processor() {
                     @Override
                     public void process(Exchange exchange) throws Exception {
                         ClientJsonApiBodyResponseSuccess stepThreeResponse = (ClientJsonApiBodyResponseSuccess) exchange.getIn().getBody();
-                        if (stepThreeResponse.getData().get(0).getStep.equalsIgnoreCase("3")) {
-                            exchange.setProperty("Step3", stepThreeResponse.getData().get(0).getDescription());
+                        if (stepThreeResponse.getData().get(0).getStep().equalsIgnoreCase("3")) {
+                            exchange.setProperty("Step3", stepThreeResponse.getData().get(0).getStepDescription());
                             exchange.setProperty("Error", "0000");
                             exchange.setProperty("ErrorDescription", "No error");
                         } else {
@@ -31,7 +32,7 @@ public class GetStepThreeClientRoute extends RouteBuilder {
                             exchange.setProperty("ErrorDescription", "Error consulting the step three");
                         }
                     }
-                })*/
+                })
                 .log("Response code ${exchageProperty[Error]}");
     }
 }
