@@ -1,11 +1,6 @@
 package co.com.vanegas.microservice.resolveEnigmaApi.routes;
 
 import org.apache.camel.Exchange;
-import org.apache.camel.Processor;
-import org.apache.camel.builder.RouteBuilder;
-
-
-import org.apache.camel.Exchange;
 import org.apache.camel.builder.RouteBuilder;
 import org.springframework.stereotype.Component;
 import com.fasterxml.jackson.databind.JsonNode;
