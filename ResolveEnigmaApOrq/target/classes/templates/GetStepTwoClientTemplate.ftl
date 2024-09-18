@@ -1,11 +1,9 @@
-GetStepOneClientTemplate.ftl{
-"data":[
 {
-"header":{
-"id":"12345",
-"type":"StepsGiraffeRefrigerator"
+"data": [{
+"header": {
+"id": "12345",
+"type": "StepsGiraffeRefrigerator"
 },
-"step":"3"
-}
-]
+"step": "2"
+}]
 }
