@@ -19,6 +19,9 @@ public class GetEnigmaStepResponse   {
   @JsonProperty("header")
   private Header header = null;
 
+  @JsonProperty("step")
+  private Integer step = null;
+
   @JsonProperty("answer")
   private String answer = null;
 
@@ -30,7 +33,7 @@ public class GetEnigmaStepResponse   {
   /**
    * Get header
    * @return header
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   @NotNull
 
@@ -48,10 +51,19 @@ public class GetEnigmaStepResponse   {
     return this;
   }
 
+  public GetEnigmaStepResponse step(Integer step) {
+    this.step = step;
+    return this;
+  }
+
+  public void setStep(Integer step) {
+    this.step = step;
+  }
+
   /**
    * Get answer
    * @return answer
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   @NotNull
 
@@ -74,7 +86,7 @@ public class GetEnigmaStepResponse   {
     }
     GetEnigmaStepResponse getEnigmaStepResponse = (GetEnigmaStepResponse) o;
     return Objects.equals(this.header, getEnigmaStepResponse.header) &&
-        Objects.equals(this.answer, getEnigmaStepResponse.answer);
+            Objects.equals(this.answer, getEnigmaStepResponse.answer);
   }
 
   @Override
@@ -86,9 +98,10 @@ public class GetEnigmaStepResponse   {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GetEnigmaStepResponse {\n");
-    
+
     sb.append("    header: ").append(toIndentedString(header)).append("\n");
-    sb.append("    answer: ").append(toIndentedString(answer)).append("\n");
+    sb.append("    step: ").append(toIndentedString(step)).append("\n");
+    sb.append("    description: ").append(toIndentedString(answer)).append("\n");
     sb.append("}");
     return sb.toString();
   }

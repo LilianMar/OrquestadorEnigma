@@ -39,9 +39,10 @@ public class GetStepApiController implements GetStepApi {
         String accept = request.getHeader("Accept");
 
         GetEnigmaStepResponse getEnigmaStepResponse = new GetEnigmaStepResponse();
+        getEnigmaStepResponse.header(body.getData().get(0).getHeader());
+        getEnigmaStepResponse.step(3);
         getEnigmaStepResponse.answer("cerrar la puerta");
 
-        getEnigmaStepResponse.header(body.getData().get(0).getHeader());
 
         JsonApiBodyResponseSuccess responseSuccess = new JsonApiBodyResponseSuccess();
         responseSuccess.addDataItem(getEnigmaStepResponse);

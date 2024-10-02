@@ -7,14 +7,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.annotations.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.RequestBody;
-import springfox.documentation.spring.web.json.Json;
-
 import javax.validation.Valid;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -39,9 +35,11 @@ public class GetStepApiController implements GetStepApi {
         String accept = request.getHeader("Accept");
 
         GetEnigmaStepResponse getEnigmaStepResponse = new GetEnigmaStepResponse();
+        getEnigmaStepResponse.header(body.getData().get(0).getHeader());
+        getEnigmaStepResponse.step(1);
         getEnigmaStepResponse.answer("Abrir la nevera");
 
-        getEnigmaStepResponse.header(body.getData().get(0).getHeader());
+
 
         JsonApiBodyResponseSuccess responseSuccess = new JsonApiBodyResponseSuccess();
         responseSuccess.addDataItem(getEnigmaStepResponse);

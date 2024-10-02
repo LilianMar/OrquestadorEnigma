@@ -1,14 +1,12 @@
 package co.com.vanegas.microservice.resolveEnigmaApi.model;
 
-import java.util.Objects;
-import co.com.vanegas.microservice.resolveEnigmaApi.model.Header;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import org.springframework.validation.annotation.Validated;
+
 import javax.validation.Valid;
-import javax.validation.constraints.*;
+import javax.validation.constraints.NotNull;
+import java.util.Objects;
 
 /**
  * GetEnigmaStepResponse
@@ -18,6 +16,9 @@ import javax.validation.constraints.*;
 public class GetEnigmaStepResponse   {
   @JsonProperty("header")
   private Header header = null;
+
+  @JsonProperty("step")
+  private Integer step = null;
 
   @JsonProperty("answer")
   private String answer = null;
@@ -30,7 +31,7 @@ public class GetEnigmaStepResponse   {
   /**
    * Get header
    * @return header
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   @NotNull
 
@@ -48,10 +49,19 @@ public class GetEnigmaStepResponse   {
     return this;
   }
 
+  public GetEnigmaStepResponse step(Integer step) {
+    this.step = step;
+    return this;
+  }
+
+  public void setStep(Integer step) {
+    this.step = step;
+  }
+
   /**
    * Get answer
    * @return answer
-  **/
+   **/
   @ApiModelProperty(required = true, value = "")
   @NotNull
 
@@ -74,7 +84,7 @@ public class GetEnigmaStepResponse   {
     }
     GetEnigmaStepResponse getEnigmaStepResponse = (GetEnigmaStepResponse) o;
     return Objects.equals(this.header, getEnigmaStepResponse.header) &&
-        Objects.equals(this.answer, getEnigmaStepResponse.answer);
+            Objects.equals(this.answer, getEnigmaStepResponse.answer);
   }
 
   @Override
@@ -86,9 +96,10 @@ public class GetEnigmaStepResponse   {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GetEnigmaStepResponse {\n");
-    
+
     sb.append("    header: ").append(toIndentedString(header)).append("\n");
-    sb.append("    answer: ").append(toIndentedString(answer)).append("\n");
+    sb.append("    step: ").append(toIndentedString(step)).append("\n");
+    sb.append("    description: ").append(toIndentedString(answer)).append("\n");
     sb.append("}");
     return sb.toString();
   }
