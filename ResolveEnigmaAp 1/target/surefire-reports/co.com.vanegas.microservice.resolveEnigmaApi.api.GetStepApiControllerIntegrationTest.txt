@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: co.com.vanegas.microservice.resolveEnigmaApi.api.GetStepApiControllerIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 3.639 s <<< FAILURE! - in co.com.vanegas.microservice.resolveEnigmaApi.api.GetStepApiControllerIntegrationTest
+getStepTest  Time elapsed: 0.124 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.util.List.get(int)" because the return value of "co.com.vanegas.microservice.resolveEnigmaApi.model.JsonApiBodyRequest.getData()" is null
+	at co.com.vanegas.microservice.resolveEnigmaApi.api.GetStepApiControllerIntegrationTest.getStepTest(GetStepApiControllerIntegrationTest.java:29)
+

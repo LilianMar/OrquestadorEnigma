@@ -1,0 +1,15 @@
+/Users/lilianestefaniamaradiagocorrea/Desktop/servicios/orquestador/ResolveEnigmaAp2/src/main/java/co/com/vanegas/microservice/resolveEnigmaApi/api/ApiResponseMessage.java
+/Users/lilianestefaniamaradiagocorrea/Desktop/servicios/orquestador/ResolveEnigmaAp2/src/main/java/co/com/vanegas/microservice/resolveEnigmaApi/model/Header.java
+/Users/lilianestefaniamaradiagocorrea/Desktop/servicios/orquestador/ResolveEnigmaAp2/src/main/java/co/com/vanegas/microservice/resolveEnigmaApi/api/ApiException.java
+/Users/lilianestefaniamaradiagocorrea/Desktop/servicios/orquestador/ResolveEnigmaAp2/src/main/java/co/com/vanegas/microservice/resolveEnigmaApi/api/NotFoundException.java
+/Users/lilianestefaniamaradiagocorrea/Desktop/servicios/orquestador/ResolveEnigmaAp2/src/main/java/co/com/vanegas/microservice/resolveEnigmaApi/model/JsonApiBodyResponseSuccess.java
+/Users/lilianestefaniamaradiagocorrea/Desktop/servicios/orquestador/ResolveEnigmaAp2/src/main/java/co/com/vanegas/microservice/resolveEnigmaApi/model/GetEnigmaRequest.java
+/Users/lilianestefaniamaradiagocorrea/Desktop/servicios/orquestador/ResolveEnigmaAp2/src/main/java/co/com/vanegas/microservice/resolveEnigmaApi/api/GetStepApi.java
+/Users/lilianestefaniamaradiagocorrea/Desktop/servicios/orquestador/ResolveEnigmaAp2/src/main/java/co/com/vanegas/microservice/resolveEnigmaApi/model/GetEnigmaStepResponse.java
+/Users/lilianestefaniamaradiagocorrea/Desktop/servicios/orquestador/ResolveEnigmaAp2/src/main/java/co/com/vanegas/microservice/resolveEnigmaApi/model/JsonApiBodyRequest.java
+/Users/lilianestefaniamaradiagocorrea/Desktop/servicios/orquestador/ResolveEnigmaAp2/src/main/java/co/com/vanegas/microservice/resolveEnigmaApi/config/SwaggerDocumentationConfig.java
+/Users/lilianestefaniamaradiagocorrea/Desktop/servicios/orquestador/ResolveEnigmaAp2/src/main/java/co/com/vanegas/microservice/resolveEnigmaApi/api/ApiOriginFilter.java
+/Users/lilianestefaniamaradiagocorrea/Desktop/servicios/orquestador/ResolveEnigmaAp2/src/main/java/co/com/vanegas/microservice/resolveEnigmaApi/model/JsonApiBodyResponseErrors.java
+/Users/lilianestefaniamaradiagocorrea/Desktop/servicios/orquestador/ResolveEnigmaAp2/src/main/java/co/com/vanegas/microservice/resolveEnigmaApi/model/ErrorDetail.java
+/Users/lilianestefaniamaradiagocorrea/Desktop/servicios/orquestador/ResolveEnigmaAp2/src/main/java/co/com/vanegas/microservice/resolveEnigmaApi/api/GetStepApiController.java
+/Users/lilianestefaniamaradiagocorrea/Desktop/servicios/orquestador/ResolveEnigmaAp2/src/main/java/co/com/vanegas/microservice/resolveEnigmaApi/Swagger2SpringBoot.java
